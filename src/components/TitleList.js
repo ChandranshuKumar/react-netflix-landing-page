@@ -16,7 +16,7 @@ class TitleList extends Component {
         }).then((data) => {
             this.setState({ data: data });
         }).catch((err) => {
-            console.log("There has been an error");
+            console.log("Something went wrong");
         });
     }
 
@@ -42,6 +42,7 @@ class TitleList extends Component {
                 if (i < 5) {
                     var name = '';
                     var backDrop = 'http://image.tmdb.org/t/p/original' + title.backdrop_path;
+                    console.log(backDrop, title.backdrop_path);
                     if (!title.name) {
                         name = title.original_title;
                     }
