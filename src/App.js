@@ -14,7 +14,7 @@ class App extends Component {
     searchUrl: ""
   }
   
-  handleKeyUp(e) {
+  handleKeyUp = (e) => {
     const apiKey = '87dfa1c669eea853da609d4968d294be';
     if (e.key === 'Enter' && this.state.searchTerm !== '') {
       var searchUrl = "search/multi?query=" + this.state.searchTerm + "&api_key=" + apiKey;
@@ -22,8 +22,8 @@ class App extends Component {
     }
   }
 
-  handleChange(e) {
-    this.setState({ searchTerm: e.target.value });
+  handleChange = (event) => {
+    this.setState({ searchTerm: event.target.value });
   }
   
   render() {
